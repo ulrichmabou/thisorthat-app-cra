@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+
+function Navbar() {
+  return (
+    <nav className="navbar">
+      <div className="logo">ThisOrThat</div>
+    </nav>
+  );
+}
+
+function Question() {
+  return (
+    <div className="question-container">
+      <button className="question-btn">Dog</button>
+      <span className="question-text">OR</span>
+      <button className="question-btn">Cat</button>
+      <span className="question-text">?</span>
+    </div>
+  );
+}
+
+function Response() {
+  return (
+    <div className="response-container">
+      <p className="response-text">Dog</p>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <Navbar />
+        <Question />
+        <Response />
+      </div>
     </div>
   );
 }
